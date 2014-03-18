@@ -19,6 +19,14 @@
     "i18n": {
         "contentPath": "path:./locales",
         "fallback": "en-US"
+    },
+     "databaseConfig": {
+        "host": "localhost",
+        "database": "passportTest"
+    },
+
+    "bcrypt": {
+        "difficulty": 8
     }
 
 }
