@@ -1,4 +1,5 @@
 .DS_Store
+*.log
 .idea/
 .build/
 node_modules/
