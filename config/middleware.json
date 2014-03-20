@@ -2,26 +2,40 @@
     "middleware": {
 
         "static": {
-            "arguments": [ "path:./.build" ]
+            "arguments": ["path:./.build"]
         },
-
+        //flash messaging middleware
+        "flash": {
+            "priority": 91,
+            "module": "connect-flash",
+            "factoryMethod": "flash",
+            "enabled": true
+        },
+        //auth.injectUser middleware
+        "injectUser": {
+            "enabled": true,
+            "priority": 92,
+            "module": "path:./lib/auth"
+        },
         "router": {
-            "arguments": [{ "directory": "path:./controllers" }]
+            "arguments": [{
+                "directory": "path:./controllers"
+            }]
         },
 
         "fileNotFound": {
             "enabled": true,
             "priority": 130,
             "module": "kraken-js/middleware/404",
-            "arguments": [ "errors/404" ]
+            "arguments": ["errors/404"]
         },
 
         "serverError": {
             "enabled": true,
             "priority": 140,
             "module": "kraken-js/middleware/500",
-            "arguments": [ "errors/500" ]
+            "arguments": ["errors/500"]
         }
-        
+
     }
 }

@@ -22,7 +22,7 @@
     },
      "databaseConfig": {
         "host": "localhost",
-        "database": "passportTest"
+        "database": "krakenNextPassport"
     },
 
     "bcrypt": {
